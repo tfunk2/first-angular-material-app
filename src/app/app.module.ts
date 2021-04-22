@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
 import { QuillModule } from 'ngx-quill'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuillComponent } from './quill/quill.component';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { QuillComponent } from './quill/quill.component';
     MatSliderModule,
     MatSelectModule,
     QuillModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

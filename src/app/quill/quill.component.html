@@ -1,2 +1,13 @@
-<quill-editor format="text" [(ngModel)]="quillOutput"></quill-editor>
-<div>{{quillOutput}}</div>
+<form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+    <quill-editor
+    [styles]="editorStyle"
+    format="json"
+    [(ngModel)]="quillOutput"
+    formControlName="editor"
+    ></quill-editor>
+    <h3 *ngIf="editorForm.get('editor').value != null">{{ editorForm.get("editor").value.length }}</h3>
+    <button>Submit</button>
+</form>
+<!-- <div>{{ quillOutput }}</div> -->
+<!-- <div [innerHTML]="editorContent"></div> -->
+<quill-view [content]="editorContent" format="json" theme="snow"></quill-view>
