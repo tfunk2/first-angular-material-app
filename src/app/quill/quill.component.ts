@@ -11,7 +11,7 @@ export class QuillComponent implements OnInit {
 
   editorStyle = {
     height: '300px', 
-    width: '100vw'
+    width: '100%'
   }
 
   editorContent: string;
